@@ -105,7 +105,7 @@ class Main extends PluginBase implements Listener{
 
         if (in_array($block, (array)$middleids)) return (int)$this->config->get("middle-breaking-block-count-per-5-second");
 
-        throw new PluginException("please make sure you have set settings.yml properly.")
+        throw new PluginException("please make sure you have set settings.yml properly.");
     }
 
     /**
