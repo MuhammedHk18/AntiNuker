@@ -93,7 +93,6 @@ class Main extends PluginBase implements Listener{
      * @param int $block
      * @return int
      */
-
     public function getMaxCountForNuke(int $block): int{
 
         $slowids = $this->config->get("harder-breaking-blocks-ids");
@@ -106,7 +105,7 @@ class Main extends PluginBase implements Listener{
 
         if (in_array($block, (array)$middleids)) return (int)$this->config->get("middle-breaking-block-count-per-5-second");
 
-        return false;
+        throw new PluginException("please make sure you have set settings.yml properly.")
     }
 
     /**
